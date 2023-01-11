@@ -152,19 +152,11 @@ html {
 }
 
 .startpage__portrait {
-  height: 250px;
-  width: 250px;
+  height: 350px;
+  width: 350px;
   border: 2px dotted #4b2d29;
   border-radius: 50%;
   margin: 50px;
-}
-
-@media screen and (min-width: 1200px) {
-  .startpage__portrait {
-    height: 50%;
-    width: 50%;
-    margin: 20px;
-  }
 }
 
 .startpage__infobox {
@@ -180,6 +172,32 @@ html {
   .startpage__infobox {
     width: 50%;
   }
+}
+
+.project {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.project__image {
+  height: 350px;
+  width: 350px;
+  border: 2px dotted #4b2d29;
+  border-radius: 50%;
+  margin: 50px;
+}
+
+.project__name {
+  font-size: 30px;
+}
+
+.project__description {
+  background-color: #fff;
+  font-size: 12px;
 }
 
 body {

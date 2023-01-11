@@ -29,7 +29,7 @@ function createHtml(projects: IRepo[]) {
 
     projectImage.className = "project__image";
     projectImage.src =
-      "https://github.com/sannarossang/portfolio/blob/main/src/assets/" +
+      "https://github.com/sannarossang/portfolio/blob/master/src/assets/" +
       projects[i].name +
       ".png?raw=true";
     projectImage.alt = projects[i].name;

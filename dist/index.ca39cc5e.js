@@ -581,7 +581,7 @@ function createHtml(projects) {
         projectDescription.className = "project__description";
         // projectLink.className = "project__link";
         projectImage.className = "project__image";
-        projectImage.src = "https://github.com/sannarossang/portfolio/blob/main/src/assets/" + projects[i].name + ".png?raw=true";
+        projectImage.src = "https://github.com/sannarossang/portfolio/blob/master/src/assets/" + projects[i].name + ".png?raw=true";
         projectImage.alt = projects[i].name;
         projectTitle.innerHTML = projects[i].name;
         projectDescription.innerHTML = projects[i].name;

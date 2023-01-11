@@ -1,5 +1,4 @@
 import axios, { AxiosPromise } from "axios";
-import { IGitResponse } from "../models/IGitResponse";
 import { IRepo } from "../models/IRepo";
 
 export function getRepos(): Promise<IRepo[]> {

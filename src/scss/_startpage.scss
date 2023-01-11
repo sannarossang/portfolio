@@ -20,11 +20,6 @@
 
   &__portrait {
     @include mixins.image;
-    @include mixins.desktop {
-      margin: 20px;
-      height: 50%;
-      width: 50%;
-    }
   }
 
   &__infobox {
@@ -42,12 +37,28 @@
   }
 }
 
-// @mixin infobox {
-//   background-color: rgb(202, 198, 198);
-//   flex-flow: wrap;
-//   align-items: center;
-//   width: 250px;
-//   padding: 30px;
-//   margin: 20px;
-//   border-radius: 10px;
-// }
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+
+  &__image {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    border: dotted 2px #4b2d29;
+    margin: 50px;
+  }
+
+  &__name {
+    font-size: 30px;
+  }
+
+  &__description {
+    font-size: 12px;
+    background-color: white;
+  }
+}
