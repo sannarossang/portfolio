@@ -1,0 +1,53 @@
+@use "mixins";
+@use "variables" as v;
+@use "reset";
+
+.startpage {
+  display: flex;
+  height: 100vh;
+
+  &__text {
+    color: v.$primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 1em;
+    padding: 60px;
+  }
+
+  &__portrait {
+    @include mixins.image;
+    @include mixins.desktop {
+      margin: 20px;
+      height: 50%;
+      width: 50%;
+    }
+  }
+
+  &__infobox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    width: 80%;
+    height: 40%;
+    @include mixins.desktop {
+      width: 50%;
+    }
+  }
+}
+
+// @mixin infobox {
+//   background-color: rgb(202, 198, 198);
+//   flex-flow: wrap;
+//   align-items: center;
+//   width: 250px;
+//   padding: 30px;
+//   margin: 20px;
+//   border-radius: 10px;
+// }

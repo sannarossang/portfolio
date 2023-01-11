@@ -1,0 +1,124 @@
+@use "mixins";
+@use "variables" as v;
+
+a {
+  color: v.$primary-color;
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.176);
+  width: 100%;
+  position: absolute;
+  font-size: 1.2em;
+
+  li {
+    @include mixins.desktop {
+      justify-content: flex-end;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+
+    @include mixins.desktop {
+      padding: 20px 30px;
+    }
+
+    &:hover {
+      @include mixins.desktop {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+
+  @include mixins.desktop {
+    flex-direction: row;
+    justify-content: flex-end;
+    clear: none;
+    max-height: none;
+  }
+}
+
+.menu-icon {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding: 28px 25px;
+  cursor: pointer;
+
+  @include mixins.desktop {
+    display: none;
+  }
+
+  .nav-icon {
+    background: v.$primary-color;
+    display: block;
+    height: 5px;
+    width: 30px;
+    border-radius: 15px;
+    position: relative;
+    transition: background 0.2s ease-out;
+
+    &::before {
+      background: v.$primary-color;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      border-radius: 15px;
+      transition: all 0.2s ease-out;
+      width: 100%;
+      top: 11px;
+    }
+
+    &::after {
+      background: v.$primary-color;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      border-radius: 15px;
+      transition: all 0.2s ease-out;
+      width: 100%;
+      top: -11px;
+    }
+  }
+}
+
+.menu-btn {
+  display: none;
+  &:checked ~ .menu {
+    max-height: 240px;
+  }
+  &:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+
+  &:checked ~ .menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  &:checked ~ .menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}
