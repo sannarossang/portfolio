@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SANNA ROSSÄNG / PORTFOLIO</title>
+    <title>sanna rossäng / front end-developer</title>
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/index.b10d73a7.css">
-    <script src="/index.ca39cc5e.js" defer=""></script>
+    <script defer="" src="/index.ca39cc5e.js"></script>
+
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Favicon in tab-->
     <link rel="shortcut icon" type="image/ico" href="/favicon-illustration.5d20f426.ico">
   </head>
+
+  <!-- Bootstap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
   <!-- Start of 3-columndesign -->
   <body>
@@ -22,44 +32,53 @@
       <input class="menu-btn" type="checkbox" id="menu-btn">
       <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
       <ul class="menu">
-        <li><a href="#hem">Hem</a></li>
-        <li><a href="#ommig">Om</a></li>
-        <li><a href="#minaprojekt">Mina projekt</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#work">WORK</a></li>
+        <li><a href="#contact">EXPERIENCE</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </header>
 
     <aside class="some"></aside>
 
     <section class="startpage">
-      <article class="startpage__text">
+      <article class="startpage__wrapper">
         <img class="startpage__portrait" src="/illustration-sanna-yellow.de819ac5.png" alt="illustrated portrait of sanna rossang">
-        <article class="startpage__infobox">
-          Jag studerar Front End Developer på Medieinstitutet
+        <article class="startpage_textwrapper">
+          <span class="startpage__infotitle"> Hi, I'm Sanna! </span>
+          <span class="startpage__infotext">
+            I'm a creative junior front end developer and former journalist
+          </span>
         </article>
       </article>
     </section>
 
-    <!-- Home aside SoMe -->
-    <section>
+    <!-- Home aside SoMe
       <aside>
         <article class="some">
           <a href="https://www.instagram.com/sannarossang/">
-            <i class="bi bi-linkedin" title="Sanna Rossängs Instagram-konto"></i>
+            <i
+              class="bi bi-linkedin"
+              title="Sanna Rossängs Instagram-konto"
+            ></i>
           </a>
           <a href="https://www.instagram.com/sannarossang/">
             <i class="bi bi-twitter" title="Sanna Rossängs Instagram-konto"></i>
           </a>
           <a href="https://www.instagram.com/sannarossang/">
-            <i class="bi bi-instagram" title="Sanna Rossängs Instagram-konto"></i>
+            <i
+              class="bi bi-instagram"
+              title="Sanna Rossängs Instagram-konto"
+            ></i>
           </a>
           <a href="https://www.instagram.com/sannarossang/">
             <i class="bi bi-github" title="Sanna Rossängs Instagram-konto"></i>
           </a>
         </article>
-      </aside>
+      </aside> -->
 
-      <!-- Home aside email
+    <!-- Home aside email
       <section class="col-0 d-none d-lg-block col-lg-2">
         <a class="email" href="mailto:sanna.rossang@gmail.com"
           >sanna.rossang@gmail.com</a
@@ -68,52 +87,76 @@
     </section> -->
 
     <!-- About -->
-    <section>
-      <aside></aside>
-      <article>
-        <a name="ommig"> <h2 class="display-6">Om mig</h2></a>
-        <article>
-          <article>
-            <p>
-              Sanna Rossäng heter jag och är utbildad journalist med
-              spetskompetens inom det digitala medielandskapet där jag varit
-              verksam i sju år. Nu vidareutbildar jag mig till Front End
-              Developer på Medieinstitutet.
-            </p>
-            <p>
-              Jag har jobbat som allt från arbetsledande redaktionschef till
-              sociala medie-redaktör på några av Sveriges populäraste varumärken
-              så som ELLE Decoration, Motherhood och MåBra, som alla ägs av
-              Aller media.
-            </p>
-          </article>
-        </article>
+    <section class="about">
+      <article class="about__textbox">
+        <h2 class="about__infoheader">About</h2>
+        <h3 class="about__smallheader">
+          FRONT END DEVELOPER AND FORMER JOURNALIST
+        </h3>
+        <p class="about__infotext">
+          Sanna Rossäng heter jag och är utbildad journalist med spetskompetens
+          inom det digitala medielandskapet där jag varit verksam i sju år. Nu
+          vidareutbildar jag mig till Front End Developer på Medieinstitutet.
+          Jag har jobbat som allt från arbetsledande redaktionschef till sociala
+          medie-redaktör på några av Sveriges populäraste varumärken så som ELLE
+          Decoration, Motherhood och MåBra, som alla ägs av Aller media.
+        </p>
       </article>
-      <article class="col-0 d-none d-lg-block col-lg-2"></article>
     </section>
 
     <!-- Projects -->
-    <section>
-      <aside></aside>
-      <section>
-        <a name="minaprojekt"> <h2 class="display-6">Mina projekt</h2></a>
 
-        <div id="myGitProjects"></div>
-      </section>
+    <section>
+      <a name="minaprojekt"></a>
+
+      <div id="myGitProjects">
+        <h2 class="project_header">PROJECTS</h2>
+        <h3 class="project__smallheader">
+          Let's be creative! Here is some of my work so far as a front end
+          developer student
+        </h3>
+      </div>
     </section>
 
-    <article></article>
+    <!-- Experience -->
+
+    <section class="experience">
+      <h2 class="experience_header">EXPERIENCE</h2>
+      <h3 class="experience__smallheader">
+        Let's be creative! Here is some of my work so far as a front end
+        developer student
+      </h3>
+    </section>
+
     <!-- Contact -->
 
-    <section>
-      <aside></aside>
-      <article>
-        <section>  
-      <article></article>
+    <section class="contact">
+      <h2 class="contact_header">CONTACT</h2>
+      <h3 class="contact__smallheader">
+        Let's be creative! Here is some of my work so far as a front end
+        developer student
+      </h3>
     </section>
 
     <!-- Footer -->
 
-    <footer>Copyright Sanna Rossäng &COPY; with love</footer>
-  </article></section></section></body>
+    <footer class="footer">
+      <p class="footer_copyright">Copyright Sanna Rossäng &COPY; with love</p>
+      <p class="footer_copyright">Illustration Josefin Rossäng</p>
+      <article class="footer__some">
+        <a href="https://www.instagram.com/sannarossang/">
+          <i class="bi bi-linkedin" title="Sanna Rossängs Instagram-konto"></i>
+        </a>
+        <a href="https://www.instagram.com/sannarossang/">
+          <i class="bi bi-twitter" title="Sanna Rossängs Instagram-konto"></i>
+        </a>
+        <a href="https://www.instagram.com/sannarossang/">
+          <i class="bi bi-instagram" title="Sanna Rossängs Instagram-konto"></i>
+        </a>
+        <a href="https://www.instagram.com/sannarossang/">
+          <i class="bi bi-github" title="Sanna Rossängs Instagram-konto"></i>
+        </a>
+      </article>
+    </footer>
+  </body>
 </html>

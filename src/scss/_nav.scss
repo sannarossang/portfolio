@@ -3,17 +3,27 @@
 
 a {
   color: v.$primary-color;
+  font-family: "Aboreto";
+  font-weight: bold;
+  margin: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: darkred;
+  text-decoration: underline dotted;
 }
 
 .header {
   background-color: rgba(255, 255, 255, 0.176);
   width: 100%;
-  position: absolute;
   font-size: 1.2em;
+  position: fixed;
 
   li {
     @include mixins.desktop {
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
   }
 
@@ -44,7 +54,7 @@ a {
 .menu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;

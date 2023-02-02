@@ -1,5 +1,7 @@
 export interface IRepo {
   id: number;
   name: string;
-  gitUrl: string;
+  description: string;
+  html_url: string;
+  topics: string;
 }

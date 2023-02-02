@@ -561,9 +561,12 @@ var __awaiter = undefined && undefined.__awaiter || function(thisArg, _arguments
     });
 };
 let projects = [];
+console.log(projects);
 function getProjects() {
     return __awaiter(this, void 0, void 0, function*() {
         projects = yield (0, _gitService.getRepos)();
+        console.log(projects);
+        projects.splice(3, 1);
         console.log(projects);
         createHtml(projects);
     });
@@ -574,25 +577,42 @@ function createHtml(projects) {
         let projectContainer = document.createElement("div");
         let projectTitle = document.createElement("h2");
         let projectDescription = document.createElement("span");
-        //let projectLink = document.createElement("a");
-        let projectImage = document.createElement("img");
+        let projectTagsTitle = document.createElement("span");
+        let projectTags = document.createElement("span");
+        let projectLinkTitle = document.createElement("span");
+        let projectLink = document.createElement("a");
+        let projectLinkIcon = document.createElement("i");
+        // let projectImage = document.createElement("img");
         projectContainer.className = "project";
         projectTitle.className = "project__name";
         projectDescription.className = "project__description";
-        // projectLink.className = "project__link";
-        projectImage.className = "project__image";
-        projectImage.src = "https://github.com/sannarossang/portfolio/blob/master/src/assets/" + projects[i].name + ".png?raw=true";
-        projectImage.alt = projects[i].name;
+        projectTagsTitle.className = "project__tagstitle";
+        projectTags.className = "project__tags";
+        projectLinkTitle.className = "project__linktitle";
+        projectLink.className = "project__link";
+        projectLinkIcon.className = "project__icon";
+        // projectImage.className = "project__image";
+        // projectImage.src =
+        //   "https://github.com/sannarossang/portfolio/blob/master/src/assets/" +
+        //   projects[i].name +
+        //   ".png?raw=true";
+        // projectImage.alt = projects[i].name;
         projectTitle.innerHTML = projects[i].name;
-        projectDescription.innerHTML = projects[i].name;
-        // projectLink.href = projects[i].name;
-        //projectLink.innerHTML = projects[i].gitUrl;
-        //projectLink.innerHTML += projects[i].id;
-        projectImage.innerHTML = projects[i].gitUrl;
+        projectDescription.innerHTML = projects[i].description;
+        projectTagsTitle.innerHTML = "Language";
+        projectTags.innerHTML = projects[i].topics;
+        projectLinkTitle.innerHTML = "Check it out";
+        projectLink.href = projects[i].html_url;
+        projectLink.innerHTML = projects[i].html_url;
+        projectLink.appendChild(projectLinkIcon);
+        projectLink.innerHTML = "<i class='bi bi-github'></i>";
         projectContainer.appendChild(projectTitle);
         projectContainer.appendChild(projectDescription);
-        //projectContainer.appendChild(projectLink);
-        projectContainer.appendChild(projectImage);
+        projectContainer.appendChild(projectTagsTitle);
+        projectContainer.appendChild(projectTags);
+        projectContainer.appendChild(projectLinkTitle);
+        projectContainer.appendChild(projectLink);
+        // projectContainer.appendChild(projectImage);
         myGitProjects.appendChild(projectContainer);
     }
 }

@@ -1,0 +1,32 @@
+@use "mixins";
+@use "variables" as v;
+@use "reset";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 40px;
+  @include mixins.desktop {
+    flex-direction: row;
+    padding: 250px;
+  }
+
+  &__smallheader {
+    @include mixins.headerh3;
+    padding: 10px 0px 10px 0px;
+    text-align: start;
+    @include mixins.desktop {
+      font-size: 2em;
+    }
+  }
+}
+
+.contact_header {
+  @include mixins.headerh2;
+  justify-content: center;
+  text-align: start;
+  @include mixins.desktop {
+    font-size: 9em;
+  }
+}

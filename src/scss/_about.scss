@@ -1,0 +1,44 @@
+@use "mixins";
+@use "variables" as v;
+@use "reset";
+
+.about {
+  display: flex;
+  background-color: white;
+  text-align: center;
+  padding: 60px;
+  height: 100vh;
+  @include mixins.desktop {
+    padding: 250px;
+  }
+
+  // &__textbox {
+  // }
+
+  &__infoheader {
+    @include mixins.headerh2;
+    text-align: start;
+    @include mixins.desktop {
+      font-size: 9em;
+    }
+  }
+
+  &__smallheader {
+    @include mixins.headerh3;
+    text-align: start;
+    @include mixins.desktop {
+      font-size: 2em;
+    }
+  }
+
+  &__infotext {
+    font-family: "Montserrat";
+    font-size: 12px;
+    line-height: 1.9em;
+    font-weight: 400;
+    text-align: start;
+    @include mixins.desktop {
+      font-size: 14px;
+    }
+  }
+}
