@@ -8,7 +8,6 @@
   height: 100vh;
   padding: 40px;
   @include mixins.desktop {
-    flex-direction: row;
     padding: 250px;
   }
 

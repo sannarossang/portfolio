@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@parcel/validator-typescript": "^2.8.0",
-    "axios": "^1.2.1"
+    "axios": "^1.2.1",
+    "parcel-bundler": "^1.12.5"
   }
 }

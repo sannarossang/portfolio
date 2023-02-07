@@ -301,6 +301,7 @@ article.some {
 
 .about__infotext {
   text-align: start;
+  padding-top: 15px;
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 400;
@@ -452,7 +453,6 @@ article.some {
 }
 
 .experience {
-  height: 100vh;
   background-color: #fff;
   flex-direction: column;
   padding: 40px;
@@ -504,7 +504,6 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .contact {
-    flex-direction: row;
     padding: 250px;
   }
 }

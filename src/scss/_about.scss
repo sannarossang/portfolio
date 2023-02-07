@@ -37,6 +37,7 @@
     line-height: 1.9em;
     font-weight: 400;
     text-align: start;
+    padding-top: 15px;
     @include mixins.desktop {
       font-size: 14px;
     }
