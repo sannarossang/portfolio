@@ -38,9 +38,10 @@
     font-weight: 400;
     text-align: start;
     padding-top: 15px;
-    max-width: 50%;
+    max-width: 80%;
     @include mixins.desktop {
       font-size: 14px;
+      max-width: 50%;
     }
   }
 }

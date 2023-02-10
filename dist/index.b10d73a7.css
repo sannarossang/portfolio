@@ -227,7 +227,7 @@ html {
 
 @media screen and (min-width: 1200px) {
   .startpage__infotext {
-    max-width: 80%;
+    width: 75%;
     flex-direction: column;
     font-size: 2em;
   }
@@ -301,7 +301,7 @@ article.some {
 
 .about__infotext {
   text-align: start;
-  max-width: 50%;
+  max-width: 80%;
   padding-top: 15px;
   font-family: Montserrat;
   font-size: 12px;
@@ -311,6 +311,7 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .about__infotext {
+    max-width: 50%;
     font-size: 14px;
   }
 }
@@ -517,7 +518,7 @@ article.some {
 
 .experience__infotext {
   text-align: start;
-  max-width: 50%;
+  max-width: 80%;
   padding-top: 15px;
   padding-bottom: 20px;
   font-family: Montserrat;
@@ -528,6 +529,7 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .experience__infotext {
+    max-width: 50%;
     font-size: 14px;
   }
 }
@@ -560,6 +562,29 @@ article.some {
   }
 }
 
+.contact__wrapper {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__wrapper, .contact__textwrapper {
+    flex-direction: row;
+  }
+}
+
+.contact__imagewrapper {
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__imagewrapper {
+    flex-direction: row;
+    padding-left: 140px;
+  }
+}
+
 .contact__smallheader {
   text-align: start;
   padding: 10px 0;
@@ -571,6 +596,7 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .contact__smallheader {
+    max-width: 60%;
     font-size: 2em;
   }
 }
@@ -590,6 +616,23 @@ article.some {
   }
 }
 
+.contact__portrait {
+  height: 250px;
+  width: 250px;
+  border: 1px dotted #4b2d29;
+  border-radius: 50%;
+  margin: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__portrait {
+    height: 350px;
+    width: 350px;
+    flex-direction: row;
+    justify-content: end;
+  }
+}
+
 .contact .contact_header {
   text-align: start;
   justify-content: center;
@@ -601,8 +644,22 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .contact .contact_header {
+    max-width: 60%;
     font-size: 9em;
   }
+}
+
+.button {
+  cursor: pointer;
+  background-color: #c5c0b8;
+  border: 1px solid #000;
+  border-radius: 8px;
+  margin-top: 0;
+  padding: 8px;
+}
+
+.button:hover {
+  background-color: #d4d4d4;
 }
 
 body {
