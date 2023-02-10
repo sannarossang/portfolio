@@ -1,6 +1,8 @@
 export { Project };
 
-import illustration from "../../assets/illustration.png";
+import webshop from "../../assets/webshopsquare.png";
+import bucketlist from "../../assets/bucketlistnewsquare.png";
+import favoritespot from "../../assets/favoritespotssquare.png";
 
 class Project {
   constructor(
@@ -14,24 +16,24 @@ class Project {
 
 let project1 = new Project(
   "Webshop",
-  illustration,
-  "Webshop description",
+  webshop,
+  "group project with brilliant julia carlberg and ida lindgren. webshop built with typescript.",
   "http://SannaRossang.com",
   "html"
 );
 
 let project2 = new Project(
-  "Webshop",
-  illustration,
-  "Webshop description",
+  "Bucket list",
+  bucketlist,
+  "as my first assignment in javascript I created a classic to do-list but upgrated it to a bucket list!",
   "http://SannaRossang.com",
   "html"
 );
 
 let project3 = new Project(
-  "Webshop",
-  illustration,
-  "Webshop description",
+  "Favorite Spots",
+  favoritespot,
+  "created my first app with graphQL. the result was hidden gems in stockholm. add along your favorite spot!",
   "http://SannaRossang.com",
   "html"
 );

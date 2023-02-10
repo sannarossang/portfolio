@@ -649,8 +649,12 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Project", ()=>Project);
 parcelHelpers.export(exports, "projects", ()=>projects);
-var _illustrationPng = require("../../assets/illustration.png");
-var _illustrationPngDefault = parcelHelpers.interopDefault(_illustrationPng);
+var _webshopsquarePng = require("../../assets/webshopsquare.png");
+var _webshopsquarePngDefault = parcelHelpers.interopDefault(_webshopsquarePng);
+var _bucketlistnewsquarePng = require("../../assets/bucketlistnewsquare.png");
+var _bucketlistnewsquarePngDefault = parcelHelpers.interopDefault(_bucketlistnewsquarePng);
+var _favoritespotssquarePng = require("../../assets/favoritespotssquare.png");
+var _favoritespotssquarePngDefault = parcelHelpers.interopDefault(_favoritespotssquarePng);
 class Project {
     constructor(title, img, description, link, languages){
         this.title = title;
@@ -660,19 +664,49 @@ class Project {
         this.languages = languages;
     }
 }
-let project1 = new Project("Webshop", (0, _illustrationPngDefault.default), "Webshop description", "http://SannaRossang.com", "html");
-let project2 = new Project("Webshop", (0, _illustrationPngDefault.default), "Webshop description", "http://SannaRossang.com", "html");
-let project3 = new Project("Webshop", (0, _illustrationPngDefault.default), "Webshop description", "http://SannaRossang.com", "html");
+let project1 = new Project("Webshop", (0, _webshopsquarePngDefault.default), "group project with brilliant julia carlberg and ida lindgren. webshop built with typescript.", "http://SannaRossang.com", "html");
+let project2 = new Project("Bucket list", (0, _bucketlistnewsquarePngDefault.default), "as my first assignment in javascript I created a classic to do-list but upgrated it to a bucket list!", "http://SannaRossang.com", "html");
+let project3 = new Project("Favorite Spots", (0, _favoritespotssquarePngDefault.default), "created my first app with graphQL. the result was hidden gems in stockholm. add along your favorite spot!", "http://SannaRossang.com", "html");
 let projects = [
     project1,
     project2,
     project3
 ];
 
-},{"../../assets/illustration.png":"6P5FK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6P5FK":[function(require,module,exports) {
-module.exports = require("ea2425a1d896a3a").getBundleURL("1e3qO") + "illustration.b2e2dcaf.png" + "?" + Date.now();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../assets/webshopsquare.png":"cIxnN","../../assets/bucketlistnewsquare.png":"bMl6V","../../assets/favoritespotssquare.png":"btbxw"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
-},{"ea2425a1d896a3a":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+},{}],"cIxnN":[function(require,module,exports) {
+module.exports = require("e8bd0986d68820db").getBundleURL("1e3qO") + "webshopsquare.4d353e87.png" + "?" + Date.now();
+
+},{"e8bd0986d68820db":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
 var bundleURL = {};
 function getBundleURLCached(id) {
@@ -706,36 +740,12 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
+},{}],"bMl6V":[function(require,module,exports) {
+module.exports = require("3faf3b502cd02e06").getBundleURL("1e3qO") + "bucketlistnewsquare.1dfabbde.png" + "?" + Date.now();
 
-},{}]},["k9g8K","4j3ZX"], "4j3ZX", "parcelRequire94c2")
+},{"3faf3b502cd02e06":"lgJ39"}],"btbxw":[function(require,module,exports) {
+module.exports = require("c832c67939cffc6f").getBundleURL("1e3qO") + "favoritespotssquare.e977edd0.png" + "?" + Date.now();
+
+},{"c832c67939cffc6f":"lgJ39"}]},["k9g8K","4j3ZX"], "4j3ZX", "parcelRequire94c2")
 
 //# sourceMappingURL=index.ca39cc5e.js.map
