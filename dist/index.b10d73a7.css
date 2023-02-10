@@ -314,9 +314,24 @@ article.some {
   }
 }
 
+.project-section {
+  text-align: center;
+  justify-content: row;
+  height: 100vh;
+  padding: 60px;
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .project-section {
+    padding: 250px;
+  }
+}
+
 .project_header {
   text-align: start;
   justify-content: center;
+  padding: 40px;
   font-family: Aboreto;
   font-size: 3.2em;
   font-style: italic;
@@ -331,7 +346,7 @@ article.some {
 
 #myNewProjects {
   justify-content: row;
-  padding: 40px;
+  padding: 60px;
   display: flex;
 }
 
@@ -344,6 +359,8 @@ article.some {
 .project {
   height: 100vh;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   display: flex;
 }
 
@@ -361,6 +378,7 @@ article.some {
   border: 1px dotted #4b2d29;
   border-radius: 50%;
   margin: 30px;
+  transition: transform .2s;
 }
 
 @media screen and (min-width: 1200px) {
@@ -368,6 +386,10 @@ article.some {
     height: 450px;
     width: 450px;
   }
+}
+
+.project__image:hover {
+  transform: scale(1.2);
 }
 
 .project__title {

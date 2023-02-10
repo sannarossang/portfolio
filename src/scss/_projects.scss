@@ -2,10 +2,23 @@
 @use "variables" as v;
 @use "reset";
 
+.project-section {
+  display: flex;
+  text-align: center;
+  justify-content: row;
+  padding: 60px;
+  height: 100vh;
+  @include mixins.desktop {
+    padding: 250px;
+  }
+}
+
 .project_header {
   @include mixins.headerh2;
   justify-content: center;
   text-align: start;
+  padding: 40px;
+
   @include mixins.desktop {
     font-size: 9em;
   }
@@ -21,9 +34,9 @@
 // }
 
 #myNewProjects {
-  padding: 40px;
   display: flex;
   justify-content: row;
+  padding: 60px;
   @include mixins.desktop {
     padding: 250px;
   }
@@ -31,8 +44,11 @@
 
 .project {
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   display: flex;
+
   @include mixins.desktop {
     flex-direction: column;
     justify-content: space-evenly;
@@ -41,10 +57,15 @@
 
   &__image {
     @include mixins.image;
+    transition: transform 0.2s;
     @include mixins.desktop {
       height: 450px;
       width: 450px;
     }
+  }
+
+  &__image:hover {
+    transform: scale(1.2);
   }
 
   &__title {
