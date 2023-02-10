@@ -673,37 +673,7 @@ let projects = [
     project3
 ];
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../assets/webshopsquare.png":"cIxnN","../../assets/bucketlistnewsquare.png":"bMl6V","../../assets/favoritespotssquare.png":"btbxw"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"cIxnN":[function(require,module,exports) {
+},{"../../assets/webshopsquare.png":"cIxnN","../../assets/bucketlistnewsquare.png":"bMl6V","../../assets/favoritespotssquare.png":"btbxw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cIxnN":[function(require,module,exports) {
 module.exports = require("e8bd0986d68820db").getBundleURL("1e3qO") + "webshopsquare.4d353e87.png" + "?" + Date.now();
 
 },{"e8bd0986d68820db":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -746,6 +716,36 @@ module.exports = require("3faf3b502cd02e06").getBundleURL("1e3qO") + "bucketlist
 },{"3faf3b502cd02e06":"lgJ39"}],"btbxw":[function(require,module,exports) {
 module.exports = require("c832c67939cffc6f").getBundleURL("1e3qO") + "favoritespotssquare.e977edd0.png" + "?" + Date.now();
 
-},{"c832c67939cffc6f":"lgJ39"}]},["k9g8K","4j3ZX"], "4j3ZX", "parcelRequire94c2")
+},{"c832c67939cffc6f":"lgJ39"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}]},["k9g8K","4j3ZX"], "4j3ZX", "parcelRequire94c2")
 
 //# sourceMappingURL=index.ca39cc5e.js.map

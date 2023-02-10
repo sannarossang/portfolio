@@ -7,7 +7,7 @@
   justify-content: column;
   padding: 60px;
   @include mixins.desktop {
-    padding: 250px;
+    padding: 200px;
     justify-content: row;
   }
 }

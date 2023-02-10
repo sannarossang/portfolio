@@ -267,7 +267,7 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .about {
-    padding: 250px;
+    padding: 200px;
   }
 }
 
@@ -323,7 +323,7 @@ article.some {
 @media screen and (min-width: 1200px) {
   .project-section {
     justify-content: row;
-    padding: 250px;
+    padding: 200px;
   }
 }
 
@@ -495,7 +495,7 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .experience {
-    padding: 250px;
+    padding: 200px;
   }
 }
 
@@ -538,7 +538,7 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .contact {
-    padding: 250px;
+    padding: 200px;
   }
 }
 

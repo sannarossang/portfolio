@@ -8,7 +8,7 @@
   padding: 40px;
   background-color: white;
   @include mixins.desktop {
-    padding: 250px;
+    padding: 200px;
   }
 
   &__smallheader {

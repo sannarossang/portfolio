@@ -8,7 +8,7 @@
   height: 100vh;
   padding: 40px;
   @include mixins.desktop {
-    padding: 250px;
+    padding: 200px;
   }
 
   &__smallheader {
