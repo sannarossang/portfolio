@@ -10,7 +10,7 @@
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  border: dotted 1px #4b2d29;
+  border: dotted 2px rgba(76, 32, 22, 255);
   margin: 30px;
 }
 
@@ -36,11 +36,4 @@
   font-weight: 500;
   font-size: 1em;
   font-style: italic;
-}
-
-@mixin headerproject {
-  font-family: "Aboreto";
-  font-weight: 500;
-  font-size: 12px;
-  // font-style: italic;
 }

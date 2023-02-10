@@ -5,13 +5,13 @@ a {
   color: v.$primary-color;
   font-family: "Aboreto";
   font-weight: bold;
-  margin: 10px;
+  margin: 15px;
   text-decoration: none;
   cursor: pointer;
 }
 
 a:hover {
-  color: darkred;
+  color: rgba(76, 32, 22, 255);
   text-decoration: underline dotted;
 }
 
@@ -54,7 +54,8 @@ a:hover {
 .menu {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
@@ -116,7 +117,7 @@ a:hover {
 .menu-btn {
   display: none;
   &:checked ~ .menu {
-    max-height: 240px;
+    max-height: 500px;
   }
   &:checked ~ .menu-icon .nav-icon {
     background: transparent;
@@ -131,4 +132,10 @@ a:hover {
     transform: rotate(45deg);
     top: 0;
   }
+}
+
+.header__signature {
+  width: 3%;
+  align-items: flex-start;
+  justify-content: flex-start;
 }

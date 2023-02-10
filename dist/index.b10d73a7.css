@@ -1,14 +1,14 @@
 a {
-  color: #000;
+  color: #4c2016;
   cursor: pointer;
-  margin: 10px;
+  margin: 15px;
   font-family: Aboreto;
   font-weight: bold;
   text-decoration: none;
 }
 
 a:hover {
-  color: #8b0000;
+  color: #4c2016;
   text-decoration: underline dotted;
 }
 
@@ -52,7 +52,8 @@ a:hover {
   clear: both;
   max-height: 0;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   transition: max-height .2s ease-out;
   display: flex;
 }
@@ -83,7 +84,7 @@ a:hover {
 .menu-icon .nav-icon {
   height: 5px;
   width: 30px;
-  background: #000;
+  background: #4c2016;
   border-radius: 15px;
   transition: background .2s ease-out;
   display: block;
@@ -94,7 +95,7 @@ a:hover {
   content: "";
   height: 100%;
   width: 100%;
-  background: #000;
+  background: #4c2016;
   border-radius: 15px;
   transition: all .2s ease-out;
   display: block;
@@ -106,7 +107,7 @@ a:hover {
   content: "";
   height: 100%;
   width: 100%;
-  background: #000;
+  background: #4c2016;
   border-radius: 15px;
   transition: all .2s ease-out;
   display: block;
@@ -119,7 +120,7 @@ a:hover {
 }
 
 .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 500px;
 }
 
 .menu-btn:checked ~ .menu-icon .nav-icon {
@@ -134,6 +135,12 @@ a:hover {
 .menu-btn:checked ~ .menu-icon .nav-icon:after {
   top: 0;
   transform: rotate(45deg);
+}
+
+.header__signature {
+  width: 3%;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 body {
@@ -156,7 +163,7 @@ html {
 }
 
 .startpage__wrapper {
-  color: #000;
+  color: #4c2016;
   width: 100vw;
   flex-direction: column;
   justify-content: center;
@@ -169,10 +176,12 @@ html {
 @media screen and (min-width: 1200px) {
   .startpage__wrapper {
     flex-direction: row;
+    padding: 45px;
   }
 }
 
 .startpage__textwrapper {
+  padding: 20px;
   display: flex;
 }
 
@@ -185,7 +194,7 @@ html {
 .startpage__portrait {
   height: 250px;
   width: 250px;
-  border: 1px dotted #4b2d29;
+  border: 2px dotted #4c2016;
   border-radius: 50%;
   margin: 30px;
 }
@@ -203,6 +212,7 @@ html {
   color: #4b2d29;
   text-align: start;
   place-items: center;
+  padding-bottom: 20px;
   font-family: Aboreto;
   font-size: 3.2em;
   font-style: italic;
@@ -218,6 +228,7 @@ html {
 
 .startpage__infotext {
   text-align: center;
+  max-width: 60%;
   justify-content: center;
   font-family: Aboreto;
   font-size: 1em;
@@ -229,7 +240,7 @@ html {
   .startpage__infotext {
     width: 75%;
     flex-direction: column;
-    font-size: 2em;
+    font-size: 16px;
   }
 }
 
@@ -258,6 +269,7 @@ article.some {
 }
 
 .about {
+  color: #4c2016;
   text-align: center;
   height: 100vh;
   background-color: #fff;
@@ -273,6 +285,7 @@ article.some {
 
 .about__infoheader {
   text-align: start;
+  padding-bottom: 10px;
   font-family: Aboreto;
   font-size: 3.2em;
   font-style: italic;
@@ -312,13 +325,14 @@ article.some {
 @media screen and (min-width: 1200px) {
   .about__infotext {
     max-width: 50%;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 .project-section {
   text-align: center;
   justify-content: column;
+  color: #4c2016;
   padding: 60px;
 }
 
@@ -375,7 +389,7 @@ article.some {
 .project__image {
   height: 250px;
   width: 250px;
-  border: 1px dotted #4b2d29;
+  border: 2px dotted #4c2016;
   border-radius: 50%;
   margin: 30px;
   transition: transform .2s;
@@ -394,20 +408,20 @@ article.some {
 
 .project__title {
   text-align: start;
-  padding-top: 20px;
+  padding-top: 12px;
   font-family: Aboreto;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 1200px) {
   .project__title {
-    font-size: 2.5em;
+    font-size: 20px;
   }
 }
 
 .project__smallheader {
   text-align: start;
+  margin-top: 23px;
   font-family: Aboreto;
   font-size: 1em;
   font-style: italic;
@@ -435,7 +449,7 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .project__description {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -468,6 +482,7 @@ article.some {
 
 .footer {
   text-align: center;
+  color: #4c2016;
   background-color: #fff;
   flex-direction: column;
   justify-content: center;
@@ -489,9 +504,10 @@ article.some {
 }
 
 .experience {
+  color: #4c2016;
   background-color: #fff;
   flex-direction: column;
-  padding: 40px;
+  padding: 50px;
   display: flex;
 }
 
@@ -519,8 +535,7 @@ article.some {
 .experience__infotext {
   text-align: start;
   max-width: 80%;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 400;
@@ -530,7 +545,7 @@ article.some {
 @media screen and (min-width: 1200px) {
   .experience__infotext {
     max-width: 50%;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -552,7 +567,7 @@ article.some {
 .contact {
   height: 100vh;
   flex-direction: column;
-  padding: 40px;
+  padding: 60px;
   display: flex;
 }
 
@@ -587,6 +602,7 @@ article.some {
 
 .contact__smallheader {
   text-align: start;
+  color: #4c2016;
   padding: 10px 0;
   font-family: Aboreto;
   font-size: 1em;
@@ -602,6 +618,7 @@ article.some {
 }
 
 .contact__infotext {
+  color: #4c2016;
   text-align: start;
   padding-top: 15px;
   font-family: Montserrat;
@@ -612,14 +629,14 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .contact__infotext {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 .contact__portrait {
   height: 250px;
   width: 250px;
-  border: 1px dotted #4b2d29;
+  border: 2px dotted #4c2016;
   border-radius: 50%;
   margin: 30px;
 }
@@ -649,17 +666,55 @@ article.some {
   }
 }
 
+.contact .button {
+  color: #fff;
+}
+
+.contact__signature {
+  width: 80%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 20px;
+  padding-top: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__signature {
+    max-width: 30%;
+    flex-direction: row;
+  }
+}
+
 .button {
+  color: #4c2016;
   cursor: pointer;
-  background-color: #c5c0b8;
+  width: 156px;
+  background-color: #b69384;
   border: 1px solid #000;
   border-radius: 8px;
   margin-top: 0;
   padding: 8px;
+  font-family: Aboreto;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 1200px) {
+  .button {
+    font-size: 15px;
+  }
 }
 
 .button:hover {
-  background-color: #d4d4d4;
+  box-shadow: 2px;
+  background-color: #e2beac;
+}
+
+@media screen and (min-width: 1200px) {
+  .button:hover {
+    font-size: 15px;
+  }
 }
 
 body {
