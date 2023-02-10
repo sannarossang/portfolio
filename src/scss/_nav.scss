@@ -19,28 +19,37 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.176);
   width: 100%;
   font-size: 1.2em;
-  position: fixed;
 
   li {
+    flex-direction: row;
     @include mixins.desktop {
       justify-content: flex-start;
+      flex-direction: row;
     }
   }
 
   ul {
+    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
     overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @include mixins.desktop {
+      flex-direction: row;
+    }
   }
 
   a {
     display: block;
     padding: 5px;
     text-decoration: none;
-
+    flex-direction: row;
     @include mixins.desktop {
       padding: 20px 30px;
+      flex-direction: row;
     }
 
     &:hover {
@@ -59,12 +68,29 @@ a:hover {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
-
+  flex-direction: row;
   @include mixins.desktop {
+    display: flex;
     flex-direction: row;
     justify-content: flex-end;
     clear: none;
     max-height: none;
+  }
+
+  &__imagewrapper {
+    justify-content: flex-start;
+    flex-direction: column;
+    @include mixins.desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__linkwrapper {
+    justify-content: flex-end;
+    flex-direction: column;
+    @include mixins.desktop {
+      flex-direction: row;
+    }
   }
 }
 
@@ -135,7 +161,10 @@ a:hover {
 }
 
 .header__signature {
-  width: 3%;
+  display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-direction: column;
+  width: 60px;
+  margin: 30px;
 }

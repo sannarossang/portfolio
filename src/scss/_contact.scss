@@ -5,7 +5,6 @@
 .contact {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   padding: 60px;
   @include mixins.desktop {
     padding: 200px;
@@ -28,6 +27,7 @@
 
   &__imagewrapper {
     display: flex;
+    padding-top: 80px;
     @include mixins.desktop {
       flex-direction: row;
       padding-left: 140px;
@@ -60,6 +60,7 @@
 
   &__portrait {
     @include mixins.image;
+    margin: 0px;
     @include mixins.desktop {
       height: 350px;
       width: 350px;
@@ -83,12 +84,11 @@
   }
 
   &__signature {
-    margin: 20px;
-    width: 80%;
+    width: 100%;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    padding-top: 40px;
+    padding-top: 70px;
     @include mixins.desktop {
       max-width: 30%;
       flex-direction: row;
