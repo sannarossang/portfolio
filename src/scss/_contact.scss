@@ -19,13 +19,25 @@
       font-size: 2em;
     }
   }
-}
 
-.contact_header {
-  @include mixins.headerh2;
-  justify-content: center;
-  text-align: start;
-  @include mixins.desktop {
-    font-size: 9em;
+  &__infotext {
+    font-family: "Montserrat";
+    font-size: 12px;
+    line-height: 1.9em;
+    font-weight: 400;
+    text-align: start;
+    padding-top: 15px;
+    @include mixins.desktop {
+      font-size: 14px;
+    }
+  }
+
+  .contact_header {
+    @include mixins.headerh2;
+    justify-content: center;
+    text-align: start;
+    @include mixins.desktop {
+      font-size: 9em;
+    }
   }
 }
