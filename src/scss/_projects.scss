@@ -85,10 +85,16 @@
   }
 
   &__description {
+    font-family: "Montserrat";
     text-align: start;
+    line-height: 1.9em;
+    font-weight: 400;
     font-size: 12px;
     height: 20%;
     padding: 10px 0px 10px 0px;
+    @include mixins.desktop {
+      font-size: 14px;
+    }
   }
 
   &__tagstitle {
