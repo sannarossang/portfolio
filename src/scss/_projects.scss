@@ -11,8 +11,19 @@
   }
 }
 
-#myGitProjects {
+// #myGitProjects {
+//   display: flex;
+//   justify-content: row;
+//   padding: 40px;
+//   @include mixins.desktop {
+//     padding: 250px;
+//   }
+// }
+
+#myNewProjects {
   padding: 40px;
+  display: flex;
+  justify-content: row;
   @include mixins.desktop {
     padding: 250px;
   }
@@ -36,7 +47,7 @@
     }
   }
 
-  &__name {
+  &__title {
     text-align: start;
     padding-top: 20px;
     @include mixins.headerproject;

@@ -329,17 +329,20 @@ article.some {
   }
 }
 
-#myGitProjects {
+#myNewProjects {
+  justify-content: row;
   padding: 40px;
+  display: flex;
 }
 
 @media screen and (min-width: 1200px) {
-  #myGitProjects {
+  #myNewProjects {
     padding: 250px;
   }
 }
 
 .project {
+  height: 100vh;
   flex-direction: column;
   display: flex;
 }
@@ -367,7 +370,7 @@ article.some {
   }
 }
 
-.project__name {
+.project__title {
   text-align: start;
   padding-top: 20px;
   font-family: Aboreto;
@@ -376,7 +379,7 @@ article.some {
 }
 
 @media screen and (min-width: 1200px) {
-  .project__name {
+  .project__title {
     font-size: 2.5em;
   }
 }
