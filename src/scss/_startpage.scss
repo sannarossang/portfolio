@@ -60,7 +60,7 @@
     @include mixins.desktop {
       font-size: 2em;
       flex-direction: column;
-      width: 75%;
+      max-width: 80%;
     }
   }
 }

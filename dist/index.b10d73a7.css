@@ -227,7 +227,7 @@ html {
 
 @media screen and (min-width: 1200px) {
   .startpage__infotext {
-    width: 75%;
+    max-width: 80%;
     flex-direction: column;
     font-size: 2em;
   }
@@ -316,14 +316,13 @@ article.some {
 
 .project-section {
   text-align: center;
-  justify-content: row;
-  height: 100vh;
+  justify-content: column;
   padding: 60px;
-  display: flex;
 }
 
 @media screen and (min-width: 1200px) {
   .project-section {
+    justify-content: row;
     padding: 250px;
   }
 }
@@ -331,7 +330,6 @@ article.some {
 .project_header {
   text-align: start;
   justify-content: center;
-  padding: 40px;
   font-family: Aboreto;
   font-size: 3.2em;
   font-style: italic;
@@ -345,19 +343,19 @@ article.some {
 }
 
 #myNewProjects {
-  justify-content: row;
-  padding: 60px;
+  flex-direction: column;
+  align-items: center;
   display: flex;
 }
 
 @media screen and (min-width: 1200px) {
   #myNewProjects {
-    padding: 250px;
+    flex-direction: row;
+    padding: 50px 0 0;
   }
 }
 
 .project {
-  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -383,8 +381,8 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .project__image {
-    height: 450px;
-    width: 450px;
+    height: 350px;
+    width: 350px;
   }
 }
 
@@ -408,7 +406,6 @@ article.some {
 
 .project__smallheader {
   text-align: start;
-  padding: 10px 0;
   font-family: Aboreto;
   font-size: 1em;
   font-style: italic;
@@ -417,6 +414,7 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .project__smallheader {
+    max-width: 80%;
     font-size: 2em;
   }
 }

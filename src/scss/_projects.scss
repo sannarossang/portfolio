@@ -3,13 +3,12 @@
 @use "reset";
 
 .project-section {
-  display: flex;
   text-align: center;
-  justify-content: row;
+  justify-content: column;
   padding: 60px;
-  height: 100vh;
   @include mixins.desktop {
     padding: 250px;
+    justify-content: row;
   }
 }
 
@@ -17,8 +16,6 @@
   @include mixins.headerh2;
   justify-content: center;
   text-align: start;
-  padding: 40px;
-
   @include mixins.desktop {
     font-size: 9em;
   }
@@ -35,10 +32,11 @@
 
 #myNewProjects {
   display: flex;
-  justify-content: row;
-  padding: 60px;
+  flex-direction: column;
+  align-items: center;
   @include mixins.desktop {
-    padding: 250px;
+    flex-direction: row;
+    padding: 50px 0px 0px 0px;
   }
 }
 
@@ -46,7 +44,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   display: flex;
 
   @include mixins.desktop {
@@ -59,8 +56,8 @@
     @include mixins.image;
     transition: transform 0.2s;
     @include mixins.desktop {
-      height: 450px;
-      width: 450px;
+      height: 350px;
+      width: 350px;
     }
   }
 
@@ -79,10 +76,11 @@
 
   &__smallheader {
     @include mixins.headerh3;
-    padding: 10px 0px 10px 0px;
+    // padding: 10px 0px 10px 0px;
     text-align: start;
     @include mixins.desktop {
       font-size: 2em;
+      max-width: 80%;
     }
   }
 
