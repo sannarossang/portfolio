@@ -16,6 +16,7 @@ a:hover {
   width: 100%;
   background-color: #ffffff2d;
   font-size: 1.2em;
+  position: fixed;
 }
 
 .header li {
@@ -200,6 +201,7 @@ html {
 
 @media screen and (min-width: 1200px) {
   .startpage {
+    max-width: 80%;
     flex-direction: row;
   }
 }
@@ -208,9 +210,8 @@ html {
   color: #4c2016;
   width: 100vw;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 80px;
+  padding: 100px;
   font-size: 1em;
   display: flex;
 }
@@ -218,7 +219,9 @@ html {
 @media screen and (min-width: 1200px) {
   .startpage__wrapper {
     flex-direction: row;
-    padding: 45px;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 200px;
   }
 }
 
@@ -237,7 +240,6 @@ html {
   width: 250px;
   border: 2px dotted #4c2016;
   border-radius: 50%;
-  margin: 30px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -253,6 +255,7 @@ html {
   color: #4b2d29;
   text-align: start;
   place-items: center;
+  padding-top: 40px;
   padding-bottom: 20px;
   font-family: Aboreto;
   font-size: 3.2em;
@@ -432,7 +435,6 @@ article.some {
   width: 250px;
   border: 2px dotted #4c2016;
   border-radius: 50%;
-  margin: 30px;
   transition: transform .2s;
 }
 
@@ -726,7 +728,7 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .contact__signature {
-    max-width: 30%;
+    max-width: 20%;
     flex-direction: row;
   }
 }

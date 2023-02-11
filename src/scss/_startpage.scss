@@ -7,20 +7,22 @@
   height: 100vh;
   @include mixins.desktop {
     flex-direction: row;
+    max-width: 80%;
   }
 
   &__wrapper {
     color: v.$primary-color;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100vw;
     font-size: 1em;
-    padding: 80px;
+    padding: 100px;
     @include mixins.desktop {
       flex-direction: row;
-      padding: 45px;
+      align-items: center;
+      justify-content: space-around;
+      padding-left: 200px;
     }
   }
 
@@ -48,6 +50,7 @@
     text-align: center;
     color: #4b2d29;
     padding-bottom: 20px;
+    padding-top: 40px;
     @include mixins.headerh2;
     text-align: start;
     @include mixins.desktop {
