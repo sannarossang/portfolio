@@ -210,7 +210,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 45px;
+  padding: 80px;
   font-size: 1em;
   display: flex;
 }
@@ -223,7 +223,6 @@ html {
 }
 
 .startpage__textwrapper {
-  padding: 20px;
   display: flex;
 }
 
@@ -607,6 +606,7 @@ article.some {
 }
 
 .contact {
+  color: #4c2016;
   flex-direction: column;
   padding: 60px;
   display: flex;
@@ -661,7 +661,8 @@ article.some {
 
 .contact__infotext {
   color: #4c2016;
-  text-align: start;
+  text-align: center;
+  justify-content: center;
   padding-top: 15px;
   font-family: Montserrat;
   font-size: 12px;
@@ -671,6 +672,8 @@ article.some {
 
 @media screen and (min-width: 1200px) {
   .contact__infotext {
+    justify-content: start;
+    align-items: flex-start;
     font-size: 16px;
   }
 }
@@ -710,6 +713,7 @@ article.some {
 
 .contact .button {
   color: #fff;
+  justify-content: center;
 }
 
 .contact__signature {

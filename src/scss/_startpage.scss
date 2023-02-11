@@ -17,7 +17,7 @@
     align-items: center;
     width: 100vw;
     font-size: 1em;
-    padding: 45px;
+    padding: 80px;
     @include mixins.desktop {
       flex-direction: row;
       padding: 45px;
@@ -26,7 +26,6 @@
 
   &__textwrapper {
     display: flex;
-    padding: 20px;
     @include mixins.desktop {
       flex-direction: row;
     }

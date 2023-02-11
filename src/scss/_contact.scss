@@ -5,6 +5,7 @@
 .contact {
   display: flex;
   flex-direction: column;
+  color: rgba(76, 32, 22, 255);
   padding: 60px;
   @include mixins.desktop {
     padding: 200px;
@@ -51,10 +52,13 @@
     font-size: 12px;
     line-height: 1.9em;
     font-weight: 400;
-    text-align: start;
+    text-align: center;
     padding-top: 15px;
+    justify-content: center;
     @include mixins.desktop {
       font-size: 16px;
+      justify-content: start;
+      align-items: flex-start;
     }
   }
 
@@ -81,6 +85,7 @@
 
   .button {
     color: white;
+    justify-content: center;
   }
 
   &__signature {
