@@ -54,7 +54,6 @@ a:hover {
 
     &:hover {
       display: flex;
-
       @include mixins.desktop {
         text-decoration: underline;
       }
