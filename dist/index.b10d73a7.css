@@ -14,7 +14,7 @@ a:hover {
 
 .header {
   width: 100%;
-  background-color: #ffffff2d;
+  background-color: #f4d8b0;
   font-size: 1.2em;
   position: fixed;
 }
@@ -32,7 +32,6 @@ a:hover {
 
 .header ul {
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -59,7 +58,13 @@ a:hover {
     flex-direction: row;
     padding: 20px 30px;
   }
+}
 
+.header a:hover {
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
   .header a:hover {
     text-decoration: underline;
   }

@@ -16,7 +16,7 @@ a:hover {
 }
 
 .header {
-  background-color: rgba(255, 255, 255, 0.176);
+  background-color: #f4d8b0;
   width: 100%;
   font-size: 1.2em;
   position: fixed;
@@ -35,7 +35,6 @@ a:hover {
     padding: 0;
     list-style: none;
     overflow: hidden;
-    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     @include mixins.desktop {
@@ -54,6 +53,8 @@ a:hover {
     }
 
     &:hover {
+      display: flex;
+
       @include mixins.desktop {
         text-decoration: underline;
       }
