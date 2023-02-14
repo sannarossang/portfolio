@@ -87,7 +87,8 @@ function createHTML(projects: Project[]) {
     let title: HTMLHeadElement = document.createElement("h3");
     let img: HTMLImageElement = document.createElement("img");
     let description: HTMLSpanElement = document.createElement("span");
-    // let projectLink: HTMLLinkElement = document.createElement("a");
+    let projectLinkTitle = document.createElement("span");
+    let githublink: HTMLAnchorElement = document.createElement("a");
     let language: HTMLSpanElement = document.createElement("span");
 
     container.className = "project";
@@ -95,16 +96,23 @@ function createHTML(projects: Project[]) {
     img.className = "project__image";
     title.className = "project__title";
     description.className = "project__description";
+    projectLinkTitle.className = "project__linktitle";
+    githublink.className = "project__link";
     language.className = "project_langugage";
 
     img.src = projects[i].img;
     title.innerHTML = projects[i].title;
     description.innerHTML = projects[i].description;
+    githublink.href = projects[i].githublink;
+    projectLinkTitle.innerHTML = "Check it out on github: ";
+    githublink.innerHTML = "<i class='bi bi-github'></i>";
 
     container.appendChild(img);
     container.appendChild(title);
     container.appendChild(description);
     container.appendChild(language);
+    container.appendChild(projectLinkTitle);
+    container.appendChild(githublink);
 
     projectContainer.appendChild(container);
   }

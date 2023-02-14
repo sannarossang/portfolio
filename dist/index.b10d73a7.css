@@ -221,7 +221,6 @@ html {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding-left: 200px;
   }
 }
 
@@ -232,6 +231,7 @@ html {
 @media screen and (min-width: 1200px) {
   .startpage__textwrapper {
     flex-direction: row;
+    padding-left: 50px;
   }
 }
 
@@ -435,6 +435,7 @@ article.some {
   width: 250px;
   border: 2px dotted #4c2016;
   border-radius: 50%;
+  margin: 50px;
   transition: transform .2s;
 }
 
@@ -451,14 +452,14 @@ article.some {
 
 .project__title {
   text-align: start;
-  padding-top: 12px;
+  padding-top: 16px;
   font-family: Aboreto;
-  font-size: 16px;
+  font-size: 25px;
 }
 
 @media screen and (min-width: 1200px) {
   .project__title {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -515,12 +516,18 @@ article.some {
 }
 
 .project__linktitle {
-  text-align: start;
   width: 50%;
   height: 20%;
-  padding: 10px 0;
+  padding: 30px 0 2px;
   font-family: Aboreto;
   font-size: 14px;
+}
+
+.project__link {
+  width: 50%;
+  height: 20%;
+  font-family: Aboreto;
+  font-size: 20px;
 }
 
 .footer {

@@ -9,7 +9,7 @@ class Project {
     public title: string,
     public img: string,
     public description: string,
-    public link: string,
+    public githublink: string,
     public languages: string
   ) {}
 }
@@ -18,23 +18,23 @@ let project1 = new Project(
   "Webshop",
   webshop,
   "group project with brilliant julia carlberg and ida lindgren. webshop built with typescript.",
-  "http://SannaRossang.com",
+  "https://github.com/sannarossang/webshop.git",
   "html"
 );
 
 let project2 = new Project(
   "Bucket list",
   bucketlist,
-  "as my first assignment in javascript I created a classic to do-list but upgrated it to a bucket list!",
-  "http://SannaRossang.com",
+  "as my first assignment in javascript I created a to do-list but upgrated it to a bucket list!",
+  "https://github.com/sannarossang/bucket-list.git",
   "html"
 );
 
 let project3 = new Project(
   "Favorite Spots",
   favoritespot,
-  "created my first app with graphQL. the result was hidden gems in stockholm. add along your favorite spot!",
-  "http://SannaRossang.com",
+  "created my first app with graphQL. the result was hidden gems in stockholm!",
+  "https://github.com/sannarossang/favorite-spots-stockholm.git",
   "html"
 );
 

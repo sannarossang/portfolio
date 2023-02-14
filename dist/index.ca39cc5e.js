@@ -625,20 +625,28 @@ function createHTML(projects) {
         let title = document.createElement("h3");
         let img = document.createElement("img");
         let description = document.createElement("span");
-        // let projectLink: HTMLLinkElement = document.createElement("a");
+        let projectLinkTitle = document.createElement("span");
+        let githublink = document.createElement("a");
         let language = document.createElement("span");
         container.className = "project";
         img.className = "project__image";
         title.className = "project__title";
         description.className = "project__description";
+        projectLinkTitle.className = "project__linktitle";
+        githublink.className = "project__link";
         language.className = "project_langugage";
         img.src = projects[i].img;
         title.innerHTML = projects[i].title;
         description.innerHTML = projects[i].description;
+        githublink.href = projects[i].githublink;
+        projectLinkTitle.innerHTML = "Check it out on github: ";
+        githublink.innerHTML = "<i class='bi bi-github'></i>";
         container.appendChild(img);
         container.appendChild(title);
         container.appendChild(description);
         container.appendChild(language);
+        container.appendChild(projectLinkTitle);
+        container.appendChild(githublink);
         projectContainer.appendChild(container);
     }
 }
@@ -656,24 +664,54 @@ var _bucketlistnewsquarePngDefault = parcelHelpers.interopDefault(_bucketlistnew
 var _favoritespotssquarePng = require("../../assets/favoritespotssquare.png");
 var _favoritespotssquarePngDefault = parcelHelpers.interopDefault(_favoritespotssquarePng);
 class Project {
-    constructor(title, img, description, link, languages){
+    constructor(title, img, description, githublink, languages){
         this.title = title;
         this.img = img;
         this.description = description;
-        this.link = link;
+        this.githublink = githublink;
         this.languages = languages;
     }
 }
-let project1 = new Project("Webshop", (0, _webshopsquarePngDefault.default), "group project with brilliant julia carlberg and ida lindgren. webshop built with typescript.", "http://SannaRossang.com", "html");
-let project2 = new Project("Bucket list", (0, _bucketlistnewsquarePngDefault.default), "as my first assignment in javascript I created a classic to do-list but upgrated it to a bucket list!", "http://SannaRossang.com", "html");
-let project3 = new Project("Favorite Spots", (0, _favoritespotssquarePngDefault.default), "created my first app with graphQL. the result was hidden gems in stockholm. add along your favorite spot!", "http://SannaRossang.com", "html");
+let project1 = new Project("Webshop", (0, _webshopsquarePngDefault.default), "group project with brilliant julia carlberg and ida lindgren. webshop built with typescript.", "https://github.com/sannarossang/webshop.git", "html");
+let project2 = new Project("Bucket list", (0, _bucketlistnewsquarePngDefault.default), "as my first assignment in javascript I created a to do-list but upgrated it to a bucket list!", "https://github.com/sannarossang/bucket-list.git", "html");
+let project3 = new Project("Favorite Spots", (0, _favoritespotssquarePngDefault.default), "created my first app with graphQL. the result was hidden gems in stockholm!", "https://github.com/sannarossang/favorite-spots-stockholm.git", "html");
 let projects = [
     project1,
     project2,
     project3
 ];
 
-},{"../../assets/webshopsquare.png":"cIxnN","../../assets/bucketlistnewsquare.png":"bMl6V","../../assets/favoritespotssquare.png":"btbxw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cIxnN":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../assets/webshopsquare.png":"cIxnN","../../assets/bucketlistnewsquare.png":"bMl6V","../../assets/favoritespotssquare.png":"btbxw"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"cIxnN":[function(require,module,exports) {
 module.exports = require("e8bd0986d68820db").getBundleURL("1e3qO") + "webshopsquare.4d353e87.png" + "?" + Date.now();
 
 },{"e8bd0986d68820db":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -716,36 +754,6 @@ module.exports = require("3faf3b502cd02e06").getBundleURL("1e3qO") + "bucketlist
 },{"3faf3b502cd02e06":"lgJ39"}],"btbxw":[function(require,module,exports) {
 module.exports = require("c832c67939cffc6f").getBundleURL("1e3qO") + "favoritespotssquare.e977edd0.png" + "?" + Date.now();
 
-},{"c832c67939cffc6f":"lgJ39"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}]},["k9g8K","4j3ZX"], "4j3ZX", "parcelRequire94c2")
+},{"c832c67939cffc6f":"lgJ39"}]},["k9g8K","4j3ZX"], "4j3ZX", "parcelRequire94c2")
 
 //# sourceMappingURL=index.ca39cc5e.js.map

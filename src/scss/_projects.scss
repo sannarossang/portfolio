@@ -55,6 +55,7 @@
 
   &__image {
     @include mixins.image;
+    margin: 50px;
     transition: transform 0.2s;
     @include mixins.desktop {
       height: 350px;
@@ -68,12 +69,12 @@
 
   &__title {
     text-align: start;
-    padding-top: 12px;
+    padding-top: 16px;
     font-family: "Aboreto";
-    font-size: 16px;
+    font-size: 25px;
     @include mixins.desktop {
       font-size: 2.5em;
-      font-size: 20px;
+      font-size: 30px;
     }
   }
 
@@ -123,10 +124,16 @@
 
   &__linktitle {
     font-family: "Aboreto";
-    text-align: start;
     font-size: 14px;
     width: 50%;
     height: 20%;
-    padding: 10px 0px 10px 0px;
+    padding: 30px 0px 2px 0px;
+  }
+
+  &__link {
+    font-family: "Aboreto";
+    font-size: 20px;
+    width: 50%;
+    height: 20%;
   }
 }

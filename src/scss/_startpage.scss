@@ -22,7 +22,6 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
-      padding-left: 200px;
     }
   }
 
@@ -30,6 +29,7 @@
     display: flex;
     @include mixins.desktop {
       flex-direction: row;
+      padding-left: 50px;
     }
   }
 
