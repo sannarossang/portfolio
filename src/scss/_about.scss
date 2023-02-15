@@ -55,9 +55,14 @@
     text-align: start;
     padding-top: 15px;
     max-width: 80%;
+    transition: transform 0.2s;
     @include mixins.desktop {
       font-size: 16px;
       max-width: 50%;
+    }
+
+    &__infotext:hover {
+      transform: scale(1.1);
     }
   }
 }

@@ -266,6 +266,7 @@ html {
   font-size: 3.2em;
   font-style: italic;
   font-weight: 500;
+  transition: transform .2s;
   display: flex;
 }
 
@@ -273,6 +274,10 @@ html {
   .startpage__infotitle {
     font-size: 5em;
   }
+}
+
+.startpage__infotitle:hover {
+  transform: scale(1.1);
 }
 
 .startpage__infotext {
@@ -283,6 +288,7 @@ html {
   font-size: 1em;
   font-style: italic;
   font-weight: 500;
+  transition: transform .2s;
 }
 
 @media screen and (min-width: 1200px) {
@@ -291,6 +297,10 @@ html {
     flex-direction: column;
     font-size: 16px;
   }
+}
+
+.startpage__infotext:hover {
+  transform: scale(1.1);
 }
 
 article.some {
@@ -386,6 +396,7 @@ article.some {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.9em;
+  transition: transform .2s;
 }
 
 @media screen and (min-width: 1200px) {
@@ -393,6 +404,10 @@ article.some {
     max-width: 50%;
     font-size: 16px;
   }
+}
+
+.about__infotext__infotext:hover {
+  transform: scale(1.1);
 }
 
 .project-section {

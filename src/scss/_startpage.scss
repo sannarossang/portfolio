@@ -51,6 +51,7 @@
     color: #4b2d29;
     padding-bottom: 20px;
     padding-top: 40px;
+    transition: transform 0.2s;
     @include mixins.headerh2;
     text-align: start;
     @include mixins.desktop {
@@ -58,16 +59,25 @@
     }
   }
 
+  &__infotitle:hover {
+    transform: scale(1.1);
+  }
+
   &__infotext {
     justify-content: center;
     text-align: center;
     max-width: 60%;
+    transition: transform 0.2s;
     @include mixins.headerh3;
     @include mixins.desktop {
       font-size: 16px;
       flex-direction: column;
       width: 75%;
     }
+  }
+
+  &__infotext:hover {
+    transform: scale(1.1);
   }
 }
 
