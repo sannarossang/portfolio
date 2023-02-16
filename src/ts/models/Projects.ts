@@ -10,7 +10,8 @@ class Project {
     public img: string,
     public description: string,
     public githublink: string,
-    public languages: string
+    public languages: string,
+    public link: string
   ) {}
 }
 
@@ -19,7 +20,8 @@ let project1 = new Project(
   webshop,
   "group project with brilliant julia carlberg and ida lindgren. webshop built with typescript.",
   "https://github.com/sannarossang/webshop.git",
-  "html"
+  "html",
+  "https://rossang-webshop.netlify.app/"
 );
 
 let project2 = new Project(
@@ -27,7 +29,8 @@ let project2 = new Project(
   bucketlist,
   "as my first assignment in javascript I created a to do-list but upgrated it to a bucket list!",
   "https://github.com/sannarossang/bucket-list.git",
-  "html"
+  "html",
+  "https://rossang-bucketlist.netlify.app/"
 );
 
 let project3 = new Project(
@@ -35,7 +38,8 @@ let project3 = new Project(
   favoritespot,
   "created my first app with graphQL. the result was hidden gems in stockholm!",
   "https://github.com/sannarossang/favorite-spots-stockholm.git",
-  "html"
+  "html",
+  "https://rossang-bucketlist.netlify.app/"
 );
 
 export let projects: Project[] = [project1, project2, project3];

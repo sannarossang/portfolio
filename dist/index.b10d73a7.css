@@ -552,10 +552,10 @@ article.some {
   font-size: 12px;
 }
 
-.project__linktitle {
+.project__linktitle, .project__weblinktitle {
   width: 50%;
   height: 20%;
-  padding: 30px 0 2px;
+  padding: 20px 0 2px;
   font-family: Aboreto;
   font-size: 14px;
 }

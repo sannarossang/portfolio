@@ -84,36 +84,49 @@ function createHTML(projects: Project[]) {
 
   for (let i = 0; i < projects.length; i++) {
     let container: HTMLDivElement = document.createElement("div");
+
     let title: HTMLHeadElement = document.createElement("h3");
-    let img: HTMLImageElement = document.createElement("img");
-    let description: HTMLSpanElement = document.createElement("span");
-    let projectLinkTitle = document.createElement("span");
-    let githublink: HTMLAnchorElement = document.createElement("a");
-    let language: HTMLSpanElement = document.createElement("span");
-
-    container.className = "project";
-
-    img.className = "project__image";
     title.className = "project__title";
-    description.className = "project__description";
-    projectLinkTitle.className = "project__linktitle";
-    githublink.className = "project__link";
-    language.className = "project_langugage";
-
-    img.src = projects[i].img;
     title.innerHTML = projects[i].title;
+    container.appendChild(title);
+
+    let img: HTMLImageElement = document.createElement("img");
+    img.className = "project__image";
+    img.src = projects[i].img;
+    container.appendChild(img);
+
+    let description: HTMLSpanElement = document.createElement("span");
+    description.className = "project__description";
     description.innerHTML = projects[i].description;
+    container.appendChild(description);
+
+    let projectWebLinkTitle = document.createElement("span");
+    projectWebLinkTitle.className = "project__weblinktitle";
+    container.appendChild(projectWebLinkTitle);
+
+    let websidelink: HTMLAnchorElement = document.createElement("a");
+    websidelink.className = "project__websidelink";
+    websidelink.href = projects[i].link;
+    projectWebLinkTitle.innerHTML = "Try it out: ";
+    websidelink.innerHTML = '<i class="bi bi-arrow-through-heart"></i>';
+    container.appendChild(websidelink);
+
+    let projectLinkTitle = document.createElement("span");
+    projectLinkTitle.className = "project__linktitle";
+    container.appendChild(projectLinkTitle);
+
+    let githublink: HTMLAnchorElement = document.createElement("a");
+    githublink.className = "project__link";
     githublink.href = projects[i].githublink;
     projectLinkTitle.innerHTML = "Check it out on github: ";
     githublink.innerHTML = "<i class='bi bi-github'></i>";
-
-    container.appendChild(img);
-    container.appendChild(title);
-    container.appendChild(description);
-    container.appendChild(language);
-    container.appendChild(projectLinkTitle);
     container.appendChild(githublink);
 
+    let language: HTMLSpanElement = document.createElement("span");
+    language.className = "project_langugage";
+    container.appendChild(language);
+
+    container.className = "project";
     projectContainer.appendChild(container);
   }
 }
