@@ -560,11 +560,16 @@ article.some {
   font-size: 14px;
 }
 
-.project__link {
+.project__link, .project__websidelink {
   width: 50%;
   height: 20%;
   font-family: Aboreto;
   font-size: 20px;
+}
+
+.project__iconcontainer {
+  flex-direction: row;
+  display: flex;
 }
 
 .footer {

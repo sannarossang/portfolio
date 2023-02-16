@@ -131,10 +131,16 @@
     padding: 20px 0px 2px 0px;
   }
 
-  &__link {
+  &__link,
+  &__websidelink {
     font-family: "Aboreto";
     font-size: 20px;
     width: 50%;
     height: 20%;
+  }
+
+  &__iconcontainer {
+    display: flex;
+    flex-direction: row;
   }
 }

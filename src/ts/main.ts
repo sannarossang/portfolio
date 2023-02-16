@@ -100,6 +100,10 @@ function createHTML(projects: Project[]) {
     description.innerHTML = projects[i].description;
     container.appendChild(description);
 
+    let iconContainer: HTMLDivElement = document.createElement("div");
+    iconContainer.className = "project__iconcontainer";
+    container.appendChild(iconContainer);
+
     let projectWebLinkTitle = document.createElement("span");
     projectWebLinkTitle.className = "project__weblinktitle";
     container.appendChild(projectWebLinkTitle);
@@ -107,9 +111,9 @@ function createHTML(projects: Project[]) {
     let websidelink: HTMLAnchorElement = document.createElement("a");
     websidelink.className = "project__websidelink";
     websidelink.href = projects[i].link;
-    projectWebLinkTitle.innerHTML = "Try it out: ";
-    websidelink.innerHTML = '<i class="bi bi-arrow-through-heart"></i>';
-    container.appendChild(websidelink);
+    // projectWebLinkTitle.innerHTML = "Try it out: ";
+    websidelink.innerHTML = '<i class="bi bi-arrow-right-circle-fill"></i>';
+    iconContainer.appendChild(websidelink);
 
     let projectLinkTitle = document.createElement("span");
     projectLinkTitle.className = "project__linktitle";
@@ -118,9 +122,9 @@ function createHTML(projects: Project[]) {
     let githublink: HTMLAnchorElement = document.createElement("a");
     githublink.className = "project__link";
     githublink.href = projects[i].githublink;
-    projectLinkTitle.innerHTML = "Check it out on github: ";
+    // projectLinkTitle.innerHTML = "Check it out on github: ";
     githublink.innerHTML = "<i class='bi bi-github'></i>";
-    container.appendChild(githublink);
+    iconContainer.appendChild(githublink);
 
     let language: HTMLSpanElement = document.createElement("span");
     language.className = "project_langugage";
