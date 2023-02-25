@@ -84,6 +84,7 @@ function createHTML(projects: Project[]) {
 
   for (let i = 0; i < projects.length; i++) {
     let container: HTMLDivElement = document.createElement("div");
+    container.className = "project";
 
     let title: HTMLHeadElement = document.createElement("h3");
     title.className = "project__title";
@@ -130,7 +131,6 @@ function createHTML(projects: Project[]) {
     language.className = "project_langugage";
     container.appendChild(language);
 
-    container.className = "project";
     projectContainer.appendChild(container);
   }
 }
