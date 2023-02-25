@@ -147,6 +147,9 @@ function createHTMLOther(otherProjects: OtherProjects[]) {
     let container: HTMLDivElement = document.createElement("div");
     container.className = "otherproject";
 
+    // let opcontainer: HTMLDivElement = document.createElement("div");
+    // container.className = "otherproject__container";
+
     let title: HTMLHeadElement = document.createElement("h3");
     title.className = "otherproject__title";
     title.innerHTML = otherProjects[i].title;

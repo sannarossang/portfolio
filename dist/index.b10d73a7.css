@@ -605,6 +605,21 @@ article.some {
   }
 }
 
+.otherproject__smallheader {
+  text-align: center;
+  padding: 50px 0 20px;
+  font-family: Aboreto;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1200px) {
+  .otherproject__smallheader {
+    font-size: 2em;
+  }
+}
+
 .footer {
   text-align: center;
   color: #4c2016;
