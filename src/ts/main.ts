@@ -74,6 +74,7 @@
 // getProjects();
 
 import { Project, projects } from "./models/Projects";
+import { OtherProjects, otherProjects } from "./models/OtherProjects";
 
 function createHTML(projects: Project[]) {
   let projectContainer = document.getElementById(
@@ -135,4 +136,37 @@ function createHTML(projects: Project[]) {
   }
 }
 
+function createHTMLOther(otherProjects: OtherProjects[]) {
+  let otherProjectContainer = document.getElementById(
+    "myOtherProjects"
+  ) as HTMLDivElement;
+
+  otherProjectContainer.innerHTML = "";
+
+  for (let i = 0; i < otherProjects.length; i++) {
+    let container: HTMLDivElement = document.createElement("div");
+    container.className = "otherproject";
+
+    let title: HTMLHeadElement = document.createElement("h3");
+    title.className = "otherproject__title";
+    title.innerHTML = otherProjects[i].title;
+    container.appendChild(title);
+
+    // let description: HTMLSpanElement = document.createElement("span");
+    // description.className = "otherproject__description";
+    // description.innerHTML = otherProjects[i].description;
+    // container.appendChild(description);
+
+    let githublink: HTMLAnchorElement = document.createElement("a");
+    githublink.className = "otherproject__link";
+    githublink.href = otherProjects[i].githublink;
+    // projectLinkTitle.innerHTML = "Check it out on github: ";
+    githublink.innerHTML = "<i class='bi bi-github'></i>";
+    container.appendChild(githublink);
+
+    otherProjectContainer.appendChild(container);
+  }
+}
+
 createHTML(projects);
+createHTMLOther(otherProjects);

@@ -572,6 +572,39 @@ article.some {
   display: flex;
 }
 
+.otherproject {
+  background-color: #fff;
+  border: 2px dotted #4c2016;
+  border-radius: 25px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .otherproject {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.otherproject__title {
+  text-align: start;
+  padding-top: 16px;
+  font-family: Aboreto;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .otherproject__title {
+    font-size: 20px;
+  }
+}
+
 .footer {
   text-align: center;
   color: #4c2016;

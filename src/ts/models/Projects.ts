@@ -42,4 +42,4 @@ let project3 = new Project(
   "https://rossang-bucketlist.netlify.app/"
 );
 
-export let projects: Project[] = [project1, project2, project3];
+export let projects: Project[] = [project1, project2];

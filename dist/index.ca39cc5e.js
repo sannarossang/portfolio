@@ -617,11 +617,13 @@ function hmrAccept(bundle, id) {
 // }
 // getProjects();
 var _projects = require("./models/Projects");
+var _otherProjects = require("./models/OtherProjects");
 function createHTML(projects) {
     let projectContainer = document.getElementById("myNewProjects");
     projectContainer.innerHTML = "";
     for(let i = 0; i < projects.length; i++){
         let container = document.createElement("div");
+        container.className = "project";
         let title = document.createElement("h3");
         title.className = "project__title";
         title.innerHTML = projects[i].title;
@@ -658,13 +660,36 @@ function createHTML(projects) {
         let language = document.createElement("span");
         language.className = "project_langugage";
         container.appendChild(language);
-        container.className = "project";
         projectContainer.appendChild(container);
     }
 }
+function createHTMLOther(otherProjects) {
+    let otherProjectContainer = document.getElementById("myOtherProjects");
+    otherProjectContainer.innerHTML = "";
+    for(let i = 0; i < otherProjects.length; i++){
+        let container = document.createElement("div");
+        container.className = "otherproject";
+        let title = document.createElement("h3");
+        title.className = "otherproject__title";
+        title.innerHTML = otherProjects[i].title;
+        container.appendChild(title);
+        // let description: HTMLSpanElement = document.createElement("span");
+        // description.className = "otherproject__description";
+        // description.innerHTML = otherProjects[i].description;
+        // container.appendChild(description);
+        let githublink = document.createElement("a");
+        githublink.className = "otherproject__link";
+        githublink.href = otherProjects[i].githublink;
+        // projectLinkTitle.innerHTML = "Check it out on github: ";
+        githublink.innerHTML = "<i class='bi bi-github'></i>";
+        container.appendChild(githublink);
+        otherProjectContainer.appendChild(container);
+    }
+}
 createHTML((0, _projects.projects));
+createHTMLOther((0, _otherProjects.otherProjects));
 
-},{"./models/Projects":"e9ggx"}],"e9ggx":[function(require,module,exports) {
+},{"./models/Projects":"e9ggx","./models/OtherProjects":"lqQHg"}],"e9ggx":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Project", ()=>Project);
@@ -690,11 +715,40 @@ let project2 = new Project("Bucket list", (0, _bucketlistnewsquarePngDefault.def
 let project3 = new Project("Favorite Spots", (0, _favoritespotssquarePngDefault.default), "created my first app with graphQL. the result was hidden gems in stockholm!", "https://github.com/sannarossang/favorite-spots-stockholm.git", "html", "https://rossang-bucketlist.netlify.app/");
 let projects = [
     project1,
-    project2,
-    project3
+    project2
 ];
 
-},{"../../assets/webshopsquare.png":"cIxnN","../../assets/bucketlistnewsquare.png":"bMl6V","../../assets/favoritespotssquare.png":"btbxw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cIxnN":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../assets/webshopsquare.png":"cIxnN","../../assets/bucketlistnewsquare.png":"bMl6V","../../assets/favoritespotssquare.png":"btbxw"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"cIxnN":[function(require,module,exports) {
 module.exports = require("e8bd0986d68820db").getBundleURL("1e3qO") + "webshopsquare.4d353e87.png" + "?" + Date.now();
 
 },{"e8bd0986d68820db":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -737,36 +791,33 @@ module.exports = require("3faf3b502cd02e06").getBundleURL("1e3qO") + "bucketlist
 },{"3faf3b502cd02e06":"lgJ39"}],"btbxw":[function(require,module,exports) {
 module.exports = require("c832c67939cffc6f").getBundleURL("1e3qO") + "favoritespotssquare.e977edd0.png" + "?" + Date.now();
 
-},{"c832c67939cffc6f":"lgJ39"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
+},{"c832c67939cffc6f":"lgJ39"}],"lqQHg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "OtherProjects", ()=>OtherProjects);
+parcelHelpers.export(exports, "otherProjects", ()=>otherProjects);
+class OtherProjects {
+    constructor(title, // public description: string,
+    githublink){
+        this.title = title;
+        this.githublink = githublink;
+    }
+}
+let otherProject0 = new OtherProjects("Small app in two days with GraphQL", "https://github.com/sannarossang/favorite-spots-stockholm.git");
+let otherProject1 = new OtherProjects("Shopping cart with REST-API", "https://github.com/sannarossang/shopping-cart-rest-.git");
+let otherProject2 = new OtherProjects("Shopping cart with GraphQL-API", "https://github.com/sannarossang/shopping-cart-graphql.git");
+let otherProject3 = new OtherProjects("E2E-testing", "https://github.com/sannarossang/e2e-assignment.git");
+let otherProject4 = new OtherProjects("Unit testing", "https://github.com/sannarossang/unittest-assignment.git");
+let otherProject5 = new OtherProjects("Integration testing", "https://github.com/sannarossang/integrationstests-assignment.git");
+let otherProjects = [
+    otherProject0,
+    otherProject1,
+    otherProject2,
+    otherProject3,
+    otherProject4,
+    otherProject5
+];
 
-},{}]},["k9g8K","4j3ZX"], "4j3ZX", "parcelRequire94c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["k9g8K","4j3ZX"], "4j3ZX", "parcelRequire94c2")
 
 //# sourceMappingURL=index.ca39cc5e.js.map
